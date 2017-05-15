@@ -1,0 +1,57 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     mydata-weka.filters.unsupervised.attribute.Remove-R1-3-weka.filters.unsupervised.attribute.Discretize-F-B3-M-1.0-R2
+Instances:    463
+Attributes:   12
+              Size
+              Price
+              Views
+              Favorites
+              Medium
+              PaintingSurface
+              ArtistCountry
+              ShipmentMode
+              ArtistRecognition
+              Keywords
+              Date
+              Subject
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 0.08 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         273               58.9633 %
+Incorrectly Classified Instances       190               41.0367 %
+Kappa statistic                          0.3841
+Mean absolute error                      0.4123
+Root mean squared error                  0.4432
+Relative absolute error                 92.7576 %
+Root relative squared error             94.0075 %
+Total Number of Instances              463     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.801    0.189    0.683      0.801    0.737      0.592    0.876     0.754     '(-inf-995]'
+                 0.386    0.219    0.465      0.386    0.421      0.175    0.626     0.452     '(995-2825]'
+                 0.578    0.207    0.582      0.578    0.580      0.371    0.781     0.559     '(2825-inf)'
+Weighted Avg.    0.590    0.205    0.577      0.590    0.581      0.381    0.762     0.589     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 125  20  11 |   a = '(-inf-995]'
+  41  59  53 |   b = '(995-2825]'
+  17  48  89 |   c = '(2825-inf)'
+

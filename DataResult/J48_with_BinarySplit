@@ -1,0 +1,178 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -B -M 2
+Relation:     mydata-weka.filters.unsupervised.attribute.Remove-R1-3-weka.filters.unsupervised.attribute.Discretize-Y-F-B3-M-1.0-R2
+Instances:    463
+Attributes:   12
+              Size
+              Price
+              Views
+              Favorites
+              Medium
+              PaintingSurface
+              ArtistCountry
+              ShipmentMode
+              ArtistRecognition
+              Keywords
+              Date
+              Subject
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Size <= 720.0
+|   ArtistCountry = Japan
+|   |   Views <= 710.0: 'B2of3' (4.0)
+|   |   Views > 710.0: 'B3of3' (3.0)
+|   ArtistCountry != Japan
+|   |   ArtistCountry = Belgium: 'B2of3' (4.0/1.0)
+|   |   ArtistCountry != Belgium
+|   |   |   Size <= 232.46: 'B1of3' (95.0/8.0)
+|   |   |   Size > 232.46
+|   |   |   |   ArtistCountry = Israel: 'B2of3' (2.0)
+|   |   |   |   ArtistCountry != Israel
+|   |   |   |   |   Date = 2009.12.31: 'B2of3' (2.0)
+|   |   |   |   |   Date != 2009.12.31
+|   |   |   |   |   |   ArtistCountry = France: 'B1of3' (3.0/1.0)
+|   |   |   |   |   |   ArtistCountry != France
+|   |   |   |   |   |   |   ArtistCountry = Russia: 'B1of3' (3.0/1.0)
+|   |   |   |   |   |   |   ArtistCountry != Russia
+|   |   |   |   |   |   |   |   ArtistCountry = 
+|   |   |   |   |   |   |   |   |   ArtistRecognition = Ships in a cardboard box: 'B3of3' (3.0/1.0)
+|   |   |   |   |   |   |   |   |   ArtistRecognition != Ships in a cardboard box: 'B1of3' (2.0)
+|   |   |   |   |   |   |   |   ArtistCountry != 
+|   |   |   |   |   |   |   |   |   ArtistRecognition = Ships in a crate
+|   |   |   |   |   |   |   |   |   |   ShipmentMode = Artist featured in a collection: 'B2of3' (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   ShipmentMode != Artist featured in a collection: 'B3of3' (2.0)
+|   |   |   |   |   |   |   |   |   ArtistRecognition != Ships in a crate
+|   |   |   |   |   |   |   |   |   |   Subject = Still Life: 'B2of3' (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Subject != Still Life
+|   |   |   |   |   |   |   |   |   |   |   Subject = Nature: 'B1of3' (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Subject != Nature
+|   |   |   |   |   |   |   |   |   |   |   |   ArtistCountry = Netherlands: 'B1of3' (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ArtistCountry != Netherlands
+|   |   |   |   |   |   |   |   |   |   |   |   |   ArtistRecognition = Ships in a cardboard box
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Subject = Fantasy: 'B1of3' (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Subject != Fantasy
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ShipmentMode = Featured in Inside The Studio: 'B2of3' (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ShipmentMode != Featured in Inside The Studio
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ArtistCountry = Germany: 'B1of3' (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ArtistCountry != Germany
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Date = 2016.12.31: 'B1of3' (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Date != 2016.12.31
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Subject = Cities: 'B2of3' (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Subject != Cities
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Date = 2013.12.31: 'B1of3' (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Date != 2013.12.31
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ShipmentMode = Featured in the Catalog: 'B1of3' (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ShipmentMode != Featured in the Catalog
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Medium = Oil
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Subject = Abstract: 'B2of3' (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Subject != Abstract
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ShipmentMode = : 'B1of3' (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ShipmentMode != : 'B2of3' (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Medium != Oil
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Subject = Landscape: 'B1of3' (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Subject != Landscape
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Subject = Abstract
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PaintingSurface = Wood: 'B1of3' (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PaintingSurface != Wood
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Size <= 355.77: 'B1of3' (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Size > 355.77: 'B2of3' (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Subject != Abstract: 'B2of3' (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ArtistRecognition != Ships in a cardboard box
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Favorites <= 7.0: 'B2of3' (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Favorites > 7.0: 'B1of3' (11.0/1.0)
+Size > 720.0
+|   Size <= 1584.04
+|   |   Date = 2014.07.31: 'B3of3' (2.0)
+|   |   Date != 2014.07.31
+|   |   |   ShipmentMode = Featured in the Catalog
+|   |   |   |   ArtistCountry = United States: 'B1of3' (2.0)
+|   |   |   |   ArtistCountry != United States: 'B2of3' (7.0)
+|   |   |   ShipmentMode != Featured in the Catalog
+|   |   |   |   ShipmentMode = 
+|   |   |   |   |   Subject = Abstract
+|   |   |   |   |   |   Size <= 961.0: 'B1of3' (2.0)
+|   |   |   |   |   |   Size > 961.0: 'B2of3' (3.0)
+|   |   |   |   |   Subject != Abstract: 'B2of3' (9.0/1.0)
+|   |   |   |   ShipmentMode != 
+|   |   |   |   |   ArtistCountry = Austria: 'B2of3' (3.0)
+|   |   |   |   |   ArtistCountry != Austria
+|   |   |   |   |   |   ArtistRecognition = Ships in a tube
+|   |   |   |   |   |   |   Subject = Abstract: 'B3of3' (3.0/1.0)
+|   |   |   |   |   |   |   Subject != Abstract: 'B2of3' (8.0/2.0)
+|   |   |   |   |   |   ArtistRecognition != Ships in a tube
+|   |   |   |   |   |   |   ArtistCountry = Belgium: 'B2of3' (2.0)
+|   |   |   |   |   |   |   ArtistCountry != Belgium
+|   |   |   |   |   |   |   |   Date = 2010.12.31: 'B2of3' (2.0)
+|   |   |   |   |   |   |   |   Date != 2010.12.31
+|   |   |   |   |   |   |   |   |   Subject = Body: 'B2of3' (2.0)
+|   |   |   |   |   |   |   |   |   Subject != Body
+|   |   |   |   |   |   |   |   |   |   Subject = Botanic: 'B2of3' (2.0)
+|   |   |   |   |   |   |   |   |   |   Subject != Botanic
+|   |   |   |   |   |   |   |   |   |   |   ArtistRecognition = Ships in a cardboard box
+|   |   |   |   |   |   |   |   |   |   |   |   ArtistCountry = Italy: 'B2of3' (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ArtistCountry != Italy
+|   |   |   |   |   |   |   |   |   |   |   |   |   Subject = Landscape: 'B2of3' (11.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Subject != Landscape
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ArtistCountry = United States
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Subject = Abstract: 'B2of3' (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Subject != Abstract
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Views <= 1250.0: 'B3of3' (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Views > 1250.0: 'B2of3' (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ArtistCountry != United States
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Favorites <= 15.0: 'B2of3' (14.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Favorites > 15.0: 'B3of3' (27.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   ArtistRecognition != Ships in a cardboard box: 'B3of3' (9.0/1.0)
+|   Size > 1584.04
+|   |   ArtistCountry = Czech Republic: 'B2of3' (2.0)
+|   |   ArtistCountry != Czech Republic
+|   |   |   ArtistCountry = Italy
+|   |   |   |   ArtistRecognition = Ships in a crate: 'B3of3' (3.0/1.0)
+|   |   |   |   ArtistRecognition != Ships in a crate: 'B2of3' (2.0)
+|   |   |   ArtistCountry != Italy
+|   |   |   |   Date = 2014.12.31
+|   |   |   |   |   ShipmentMode = Artist featured in a collection
+|   |   |   |   |   |   Favorites <= 14.0: 'B2of3' (2.0)
+|   |   |   |   |   |   Favorites > 14.0: 'B3of3' (7.0/1.0)
+|   |   |   |   |   ShipmentMode != Artist featured in a collection: 'B2of3' (2.0)
+|   |   |   |   Date != 2014.12.31: 'B3of3' (106.0/16.0)
+
+Number of Leaves  : 	60
+
+Size of the tree : 	119
+
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         294               63.4989 %
+Incorrectly Classified Instances       169               36.5011 %
+Kappa statistic                          0.4522
+Mean absolute error                      0.2696
+Root mean squared error                  0.4413
+Relative absolute error                 60.6664 %
+Root relative squared error             93.6128 %
+Total Number of Instances              463     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.801    0.160    0.718      0.801    0.758      0.626    0.856     0.652     'B1of3'
+                 0.412    0.219    0.481      0.412    0.444      0.201    0.615     0.443     'B2of3'
+                 0.688    0.168    0.671      0.688    0.679      0.517    0.788     0.581     'B3of3'
+Weighted Avg.    0.635    0.182    0.624      0.635    0.628      0.449    0.754     0.559     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 125  28   3 |   a = 'B1of3'
+  41  63  49 |   b = 'B2of3'
+   8  40 106 |   c = 'B3of3'
+

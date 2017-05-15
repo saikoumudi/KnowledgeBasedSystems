@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     mydata-weka.filters.unsupervised.attribute.Remove-R1-3-weka.filters.unsupervised.attribute.Discretize-Y-F-B3-M-1.0-R2
+Instances:    463
+Attributes:   12
+              Size
+              Price
+              Views
+              Favorites
+              Medium
+              PaintingSurface
+              ArtistCountry
+              ShipmentMode
+              ArtistRecognition
+              Keywords
+              Date
+              Subject
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Size <= 720: 'B1of3' (213.0/65.0)
+Size > 720: 'B3of3' (250.0/109.0)
+
+Number of Leaves  : 	2
+
+Size of the tree : 	3
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         285               61.5551 %
+Incorrectly Classified Instances       178               38.4449 %
+Kappa statistic                          0.4225
+Mean absolute error                      0.3223
+Root mean squared error                  0.4063
+Relative absolute error                 72.524  %
+Root relative squared error             86.1961 %
+Total Number of Instances              463     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.936    0.212    0.692      0.936    0.796      0.687    0.846     0.623     'B1of3'
+                 0.183    0.116    0.438      0.183    0.258      0.091    0.582     0.390     'B2of3'
+                 0.721    0.249    0.590      0.721    0.649      0.452    0.786     0.593     'B3of3'
+Weighted Avg.    0.616    0.193    0.574      0.616    0.569      0.412    0.739     0.536     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 146   6   4 |   a = 'B1of3'
+  52  28  73 |   b = 'B2of3'
+  13  30 111 |   c = 'B3of3'
+

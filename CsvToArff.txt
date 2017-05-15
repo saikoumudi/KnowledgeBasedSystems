@@ -1,0 +1,4 @@
+mydata=read.csv("C:\UNC Charlotte\KBS\Project\Project Report\FinalDataSet.csv",header=TRUE)
+install.packages("foreign")
+library("foreign")
+write.arff(x =mydata ,file= "C:\UNC Charlotte\KBS\Project\Project Report\Finaldataaaa.arff")
